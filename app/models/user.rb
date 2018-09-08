@@ -3,4 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :confirmable, :validatable
+
+  def self.search(search)
+    where("username LIKE ?", "%#{search}%")
+  end
 end
