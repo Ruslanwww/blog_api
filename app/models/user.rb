@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :confirmable, :validatable
 
+  has_many :posts, dependent: :destroy
+
   def self.search(search)
     where("username LIKE ?", "%#{search}%")
   end
