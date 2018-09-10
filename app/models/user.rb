@@ -4,6 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :confirmable, :validatable
 
+  validates :email, :username, :firstname, :lastname, :password, presence: true
+  validates :password, length: { in: 6..50 }
+  validates :email, :username, :firstname, :lastname, length: { in: 2..50 }
+  validates :email, :username, uniqueness: true
+
   has_many :posts, dependent: :destroy
 
   def self.search(search)
