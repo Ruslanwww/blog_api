@@ -6,4 +6,10 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   include DeviseTokenAuth::Concerns::User
+
+  has_many :posts, dependent: :destroy
+
+  def self.search(search)
+    where("nickname LIKE ?", "%#{search}%")
+  end
 end
