@@ -20,7 +20,8 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'devise'
+gem 'devise_token_auth'
+gem 'omniauth'
 
 gem 'rack-cors'
 
