@@ -1,9 +1,10 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
   before_action :set_post, only: [:show, :update, :destroy, :like]
+  before_action :owner, only: [:update, :destroy]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('created_at DESC')
 
     render json: @posts
   end
@@ -35,7 +36,7 @@ class PostsController < ApplicationController
   end
 
   def like
-    if current_user.likes.exists?(post_id: @post_id)
+    if current_user.likes.exists?(post_id: @post.id)
       @like = @post.likes.find_by_user_id(current_user.id)
       @like.destroy
       render status: :ok
@@ -49,6 +50,11 @@ class PostsController < ApplicationController
   end
 
   private
+
+    def owner
+      @post = current_user.posts.find_by(id: params[:id])
+      render json: 'You do not have permission to modify this post', status: :unauthorized if @post.nil?
+    end
 
     def set_post
       @post = Post.find(params[:id])
