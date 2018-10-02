@@ -8,5 +8,8 @@ Rails.application.routes.draw do
   get '/search' => 'profiles#search_users', as: 'search_profile'
 
   get '/post/:id/like' => 'posts#like', as: 'like_post'
+
+  get 'profiles/:id' => 'profiles#show', as: 'profile'
+  get 'profiles/:id/posts' => 'profiles#show_user_posts', as: 'profile_posts'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
