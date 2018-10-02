@@ -7,4 +7,5 @@ class ProfilesController < ApplicationController
       render status: :bad_request
     end
   end
+
 end

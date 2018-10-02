@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get '/search' => 'profiles#search_users'
+  get '/search' => 'profiles#search_users', as: 'search_profile'
+
+  get '/post/:id/like' => 'posts#like', as: 'like_post'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

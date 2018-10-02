@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   include DeviseTokenAuth::Concerns::User
 
   has_many :posts, dependent: :destroy
+  has_many :likes
 
   validates :email, :nickname, :name, :lastname, :password, presence: true
   validates :password, length: { in: 8..50 }

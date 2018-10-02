@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:show, :update, :destroy]
+  before_action :set_post, only: [:show, :update, :destroy, :like]
 
   def index
     @posts = Post.all
@@ -32,6 +32,20 @@ class PostsController < ApplicationController
 
   def destroy
     @post.destroy
+  end
+
+  def like
+    if current_user.likes.exists?(post_id: @post_id)
+      @like = @post.likes.find_by_user_id(current_user.id)
+      @like.destroy
+      render status: :ok
+    else
+      @like = @post.likes.build
+      @like.user_id = current_user.id
+      if @like.save
+        render status: :ok
+      end
+    end
   end
 
   private
