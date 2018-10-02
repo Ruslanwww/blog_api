@@ -39,11 +39,13 @@ class PostsController < ApplicationController
     if current_user.likes.exists?(post_id: @post.id)
       @like = @post.likes.find_by_user_id(current_user.id)
       @like.destroy
+      @post.likes_count -= 1
       render status: :ok
     else
       @like = @post.likes.build
       @like.user_id = current_user.id
       if @like.save
+        @post.likes_count += 1
         render status: :ok
       end
     end
