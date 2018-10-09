@@ -5,7 +5,7 @@ DeviseTokenAuth.setup do |config|
   # client is responsible for keeping track of the changing tokens. Change
   # this to false to prevent the Authorization header from changing after
   # each request.
-  config.change_headers_on_each_request = false
+  # config.change_headers_on_each_request = true
 
   # By default, users will need to re-authenticate after 2 weeks. This setting
   # determines how long tokens will remain valid after they are issued.
@@ -29,7 +29,7 @@ DeviseTokenAuth.setup do |config|
   # By default sending current password is not needed for the password update.
   # Uncomment to enforce current_password param to be checked before all
   # attribute updates. Set it to :password if you want it to be checked only if
-  # password is updated.config.change_headers_on_each_request
+  # password is updated.
   # config.check_current_password_before_update = :attributes
 
   # By default we will use callbacks for single omniauth.
