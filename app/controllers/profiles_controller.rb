@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_user, only: [:show, :show_user_posts, :subscribe, :unsubscribe]
+  before_action :authenticate_user!, only: [:subscribe, :unsubscribe]
 
   def show
     render json: @user
@@ -27,9 +28,9 @@ class ProfilesController < ApplicationController
       if current_user.subscriptions.exists?(friend_id: @user.id)
         render status: :bad_request
       else
-        @subscribe = current_user.subscriptions.build
-        @subscribe.friend_id = @user.id
-        if @subscribe.save
+        @subscription = current_user.subscriptions.build
+        @subscription.friend_id = @user.id
+        if @subscription.save
           render status: :ok
         end
       end
@@ -41,8 +42,8 @@ class ProfilesController < ApplicationController
       render status: :bad_request
     else
       if current_user.subscriptions.exists?(friend_id: @user.id)
-        @subscribe = current_user.subscriptions.find_by_friend_id(@user.id)
-        if @subscribe.destroy
+        @subscription = current_user.subscriptions.find_by_friend_id(@user.id)
+        if @subscription.destroy
           render status: :ok
         end
       else
