@@ -9,6 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :posts, dependent: :destroy
   has_many :likes
+  has_many :subscriptions
 
   # validates :email, :nickname, :name, :lastname, :password, presence: true
   # validates :password, length: { in: 8..50 }
