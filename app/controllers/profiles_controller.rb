@@ -1,6 +1,6 @@
 class ProfilesController < ApplicationController
   before_action :set_user, only: [:show, :show_user_posts, :subscribe, :unsubscribe]
-  before_action :authenticate_user!, only: [:subscribe, :unsubscribe]
+  before_action :authenticate_user!, only: [:subscribe, :unsubscribe, :subscribes_list]
 
   def show
     render json: @user
@@ -50,6 +50,11 @@ class ProfilesController < ApplicationController
         render status: :bad_request
       end
     end
+  end
+
+  def subscribes_list
+    @friends = User.where(id: current_user.subscriptions.pluck(:friend_id))
+    render json: @friends
   end
 
   private
