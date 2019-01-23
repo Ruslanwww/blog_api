@@ -26,9 +26,9 @@ gem 'omniauth'
 gem 'rack-cors'
 
 gem 'carrierwave', '~> 1.0'
-gem 'carrierwave-base64'
-gem "mini_magick"
+# gem 'carrierwave-base64'
 gem "fog-aws"
+gem "mini_magick"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
