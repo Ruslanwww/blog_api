@@ -239,6 +239,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
+  carrierwave (~> 1.0)
   carrierwave-base64
   devise_token_auth
   fog-aws
