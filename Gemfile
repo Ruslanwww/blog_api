@@ -25,7 +25,8 @@ gem 'omniauth'
 
 gem 'rack-cors'
 
-gem 'carrierwave', '~> 1.0'
+# gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-base64'
 gem "mini_magick"
 gem "fog-aws"
 
