@@ -39,7 +39,7 @@ class PostsController < ApplicationController
     if current_user.likes.exists?(post_id: @post.id)
       @like = @post.likes.find_by_user_id(current_user.id)
       if @like.destroy
-        @post.likes_count -= 1
+        # @post.likes_count -= 1
         @post.save
         render json: {likes_count: @post.likes_count, like_status: false}, status: :ok
       end
@@ -47,7 +47,7 @@ class PostsController < ApplicationController
       @like = @post.likes.build
       @like.user_id = current_user.id
       if @like.save
-        @post.likes_count += 1
+        # @post.likes_count += 1
         @post.save
         render json: {likes_count: @post.likes_count, like_status: true}, status: :ok
       end
