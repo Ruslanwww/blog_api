@@ -67,7 +67,7 @@ class ProfilesController < ApplicationController
     @friends_of_friends = User.where(id:
       Subscription.where(user_id:
       User.where(id: current_user.subscriptions.pluck(:friend_id))
-          .pluck(:id)).pluck(:friend_id))
+          .pluck(:id)).pluck(:friend_id)).sample(6)
   end
 
   private
