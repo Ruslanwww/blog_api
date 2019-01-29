@@ -65,10 +65,13 @@ class ProfilesController < ApplicationController
   end
 
   def subscription_recommendations
-    @friends_of_friends = User.where(id:
+    @friends_subscribe = User.where(id:
       Subscription.where(user_id:
       User.where(id: current_user.subscriptions.pluck(:friend_id))
-          .pluck(:id)).pluck(:friend_id)).sample(6)
+          .pluck(:id)).pluck(:friend_id))
+    @user_subscribe = User.where(id: current_user.subscriptions.pluck(:friend_id))
+    @friends_of_friends = @friends_subscribe - @user_subscribe
+    render json: @friends_of_friends.sample(6)
   end
 
   private
