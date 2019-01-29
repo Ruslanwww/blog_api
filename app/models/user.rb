@@ -13,10 +13,9 @@ class User < ActiveRecord::Base
   has_many :likes
   has_many :subscriptions
 
-  # validates :email, :nickname, :name, :lastname, :password, presence: true
-  # validates :password, length: { in: 8..50 }
-  # validates :email, :nickname, :name, :lastname, length: { in: 2..50 }
-  # validates :email, :nickname, uniqueness: true
+  validates :email, :nickname, :name, :lastname, :password, presence: true
+  validates :password, length: { in: 8..50 }
+  validates :email, :nickname, :name, :lastname, length: { in: 2..50 }
 
   def self.search(search)
     where("nickname LIKE ?", "%#{search}%")
