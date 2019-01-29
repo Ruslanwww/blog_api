@@ -43,7 +43,7 @@ class ProfilesController < ApplicationController
       render status: :bad_request
     else
       if current_user.subscriptions.exists?(friend_id: @user.id)
-        @subscription = current_user.subscriptions.find(friend_id: @user.id)
+        @subscription = current_user.subscriptions.find_by(friend_id: @user.id)
         if @subscription.destroy
           render status: :ok
         end
