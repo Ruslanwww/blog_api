@@ -3,7 +3,7 @@ class ProfilesController < ApplicationController
   before_action :authenticate_user!, except: [:show, :show_user_posts]
 
   def show
-    @subscribe = Subscribe.where(friend_id: @user.id)
+    @subscribe = Subscription.where(friend_id: @user.id)
     render json: { user: @user, subscribe: @subscribe }
   end
 
