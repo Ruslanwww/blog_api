@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   get 'profiles/:id/subscribe' => 'profiles#subscribe', as: 'profile_subscribe'
   get 'profiles/:id/unsubscribe' => 'profiles#unsubscribe', as: 'profile_unsubscribe'
 
-  get 'profiles/:id/recommendations' => 'profiles#subscription_recommendations', as: 'profile_recommendations'
+  get 'profiles/recommendations' => 'profiles#subscription_recommendations', as: 'profile_recommendations'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
