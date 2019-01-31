@@ -5,9 +5,11 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get 'profiles/subscribes_list'
+  get 'profiles/:id/subscriptions_list'
+  get 'profiles/:id/subscribers_list'
+
   get 'profiles/friends_posts'
-  
+
   get '/search' => 'profiles#search_users', as: 'search_profile'
 
   get '/post/:id/like' => 'posts#like', as: 'like_post'

@@ -159,30 +159,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="addressable (vbundled(2.6.0)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="3" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/tasks" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/tasks" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/addressable-2.6.0/tasks" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="arel (vbundled(9.0.0)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -614,48 +590,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module-library">
-      <library name="launchy (vbundled(2.4.3)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="3" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/tasks" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/tasks" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/spec" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/launchy-2.4.3/tasks" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="letter_opener (vbundled(1.7.0)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="3" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/letter_opener-1.7.0/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/letter_opener-1.7.0/spec" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/letter_opener-1.7.0/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/letter_opener-1.7.0/spec" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/letter_opener-1.7.0/spec" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
       <library name="listen (vbundled(3.1.5)) [path][gem]" type="rubylib">
         <properties>
           <option name="version" value="3" />
@@ -998,30 +932,6 @@
         <excluded>
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/orm_adapter-0.5.0/spec" />
           <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/orm_adapter-0.5.0/gemfiles" />
-        </excluded>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library name="public_suffix (vbundled(3.0.3)) [path][gem]" type="rubylib">
-        <properties>
-          <option name="version" value="3" />
-        </properties>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/test" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/lib" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/test" />
-        </SOURCES>
-        <excluded>
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/bin" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/data" />
-          <root url="file://$MODULE_DIR$/vendor/bundle/ruby/2.5.0/gems/public_suffix-3.0.3/test" />
         </excluded>
       </library>
     </orderEntry>
