@@ -5,8 +5,8 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get 'profiles/:id/subscriptions_list'
-  get 'profiles/:id/subscribers_list'
+  get 'profiles/:id/subscriptions_list' => 'profiles#subscriptions_list', as: 'profile_subscriptions'
+  get 'profiles/:id/subscribers_list' => 'profiles#subscribers_list', as: 'profile_subscribers'
 
   get 'profiles/friends_posts'
 
