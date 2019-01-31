@@ -7,7 +7,7 @@ class ProfilesController < ApplicationController
     @subscribers_count = Subscription.where(user_id: @user.id).count
     render json: {
         user: @user,
-        subscriptions_count: @subscriptions,
+        subscriptions: @subscriptions,
         subscribers_count: @subscribers_count
     }
   end
