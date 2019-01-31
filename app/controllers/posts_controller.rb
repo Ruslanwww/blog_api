@@ -41,7 +41,7 @@ class PostsController < ApplicationController
       if @like.destroy
         @post.likes_count -= 1
         @post.save
-        render json: {likes_count: @post.likes_count, like_status: false}, status: :ok
+        render json: {likes_count: @post.likes.count, like_status: false}, status: :ok
       end
     else
       @like = @post.likes.build
@@ -49,7 +49,7 @@ class PostsController < ApplicationController
       if @like.save
         @post.likes_count += 1
         @post.save
-        render json: {likes_count: @post.likes_count, like_status: true}, status: :ok
+        render json: {likes_count: @post.likes.count, like_status: true}, status: :ok
       end
     end
   end
