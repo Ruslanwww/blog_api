@@ -65,7 +65,7 @@ class ProfilesController < ApplicationController
   end
 
   def subscribers_list
-    @subscribers = User.where(id: Subscriptions.where(friend_id: @user.id).pluck(:user_id))
+    @subscribers = User.where(id: Subscription.where(friend_id: @user.id).pluck(:user_id))
     render json: @subscribers
   end
 
