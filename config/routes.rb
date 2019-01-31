@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'profiles/:id/subscriptions_list'
-  get 'profiles/:id/subscribers_list'
+  get 'profiles/:id/subscriberssubscribers_list_list'
 
   get 'profiles/friends_posts'
 
