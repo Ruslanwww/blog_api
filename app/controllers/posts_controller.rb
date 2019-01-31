@@ -6,11 +6,13 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all.order('created_at DESC')
 
-    render json: @posts.as_json(include: [:likes, :user])
+    render json: @posts.as_json(include: [likes: {only: :user_id},
+                                          user: {only: [:nickname, :avatar]}])
   end
 
   def show
-    render json: @post.as_json(include: [:likes, :user])
+    render json: @post.as_json(include: [likes: {only: :user_id},
+                                         user: {only: [:nickname, :avatar]}])
   end
 
   def create
