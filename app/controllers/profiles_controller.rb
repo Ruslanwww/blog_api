@@ -10,7 +10,7 @@ class ProfilesController < ApplicationController
   def show_user_posts
     @posts = @user.posts.order('created_at DESC')
 
-    render json: @posts.as_json(include: [:likes])
+    render json: @posts.as_json(include: [:likes, :user])
   end
 
   def search_users
@@ -61,7 +61,7 @@ class ProfilesController < ApplicationController
   def friends_posts
     @posts = Post.where(user_id: current_user.subscriptions.pluck(:friend_id))
                  .order('created_at DESC')
-    render json: @posts.as_json(include: [:likes])
+    render json: @posts.as_json(include: [:likes, :user])
   end
 
   def subscription_recommendations
