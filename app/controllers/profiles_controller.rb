@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_user, only: [:show, :show_user_posts, :subscribe, :unsubscribe, subscriptions_list, subscribers_list]
+  before_action :set_user, only: [:show, :show_user_posts, :subscribe, :unsubscribe, :subscriptions_list, :subscribers_list]
   before_action :authenticate_user!, except: [:show, :show_user_posts]
 
   def show
