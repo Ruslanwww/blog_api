@@ -18,6 +18,6 @@ class User < ActiveRecord::Base
   # validates :email, :nickname, :name, :lastname, length: { in: 2..50 }
 
   def self.search(search)
-    where("nickname LIKE ?", "%#{search}%")
+    where("LOWER(nickname) LIKE LOWER(?)", "%#{search}%")
   end
 end
